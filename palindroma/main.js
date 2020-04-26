@@ -5,8 +5,11 @@
 // creo la funzione parolaPalindroma;
 function parolaPalindroma(parola) {
 
-// estrapolo ogni singola lettera della parola e la inserisco in un array;
-var lettera = parola.split('')
+// elimino eventuali spazi se invece di una parola viene inserita una frase;
+var nospaces = parola.replace(/\s/g, '');
+
+// estrapolo ogni singola lettera della parola/frase senza spazi e la inserisco in un array;
+var lettera = nospaces.split('')
 
 // inverto l'ordine degli elementi che compongo l'array, ovvero le singole lettere;
 var reverse = lettera.reverse()
@@ -15,7 +18,7 @@ var reverse = lettera.reverse()
 var reverse_ricomposta = reverse.join('')
 
 // verfico che la parola inserita dall'utente sia palidroma, ovvero uguale alla stessa parola invertita;
-if (parola == reverse_ricomposta ) {
+if (nospaces == reverse_ricomposta ) {
     return true;
     // se è vero ritorno il risultato true;
 
