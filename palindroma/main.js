@@ -6,7 +6,7 @@
 function parolaPalindroma(parola) {
 
 // elimino eventuali spazi se invece di una parola viene inserita una frase;
-var nospaces = parola.replace(/\s/g, '');
+var nospaces = parola.replace(/ /g, '');
 
 // estrapolo ogni singola lettera della parola/frase senza spazi e la inserisco in un array;
 var lettera = nospaces.split('')
